@@ -1,4 +1,47 @@
-* {
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#e6e6e6;
+font-family: monospace;
+overflow-x:hidden;
+}
+
+/* TITULO */
+
+.title{
+position:fixed;
+top:-20px;
+right:-20px;
+font-size:140px;
+color:black;
+font-weight:bold;
+}
+
+/* GALERIA */
+
+.gallery{
+width:900px;
+margin:120px auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+/* IMAGENES */
+
+.gallery img{
+width:100%;
+aspect-ratio:1/1;
+
+object-fit:contain;
+background:white;
+
+border:6px solid black;
+}* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
