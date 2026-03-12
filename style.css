@@ -1,4 +1,6 @@
-/* Reset básico */
+/* Importar fuente estilo Minecraft (pixelada) desde Font Meme o similar */
+@import url('https://fonts.cdnfonts.com/css/minecraft'); /* Ejemplo, sustituir según fuente exacta */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,25 +8,25 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
   background-color: #0a0a0a;
   color: #ddd;
+  font-family: Arial, sans-serif;
 }
 
 header {
-  position: relative;
   width: 100%;
   height: 150px;
+  position: relative;
 }
 
 header h1 {
-  font-family: 'Press Start 2P', cursive; /* Fuente pixel */
-  font-size: 3em;
-  color: #8b0000;
+  font-family: 'Minecraft', sans-serif; /* Fuente pixel */
+  font-size: 4em;
+  color: white;
+  text-transform: lowercase;
   position: absolute;
   top: 20px;
   right: 20px;
-  transform: rotate(-5deg) translateX(10px); /* efecto descuadrado */
 }
 
 /* Galería */
@@ -38,6 +40,9 @@ main {
 
 .grid img {
   width: 300px;
+  height: 300px; /* forzamos cuadrado */
+  object-fit: contain; /* mantiene proporción del tatuaje */
+  background: white;  /* relleno si es rectangular */
   border-radius: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
@@ -47,6 +52,3 @@ main {
   transform: scale(1.05);
   box-shadow: 0 0 20px #6a0dad;
 }
-
-/* Importar fuente pixel de Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
