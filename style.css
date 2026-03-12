@@ -1,4 +1,56 @@
-/* Importar fuente estilo Minecraft (pixelada) desde Font Meme o similar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-family: 'Courier New', Courier, monospace; /* fuente estilo código */
+}
+
+header {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+header h1 {
+  font-family: 'Courier New', Courier, monospace; /* fuente estilo código */
+  font-size: 6em; /* título grande */
+  color: black;
+  text-transform: lowercase;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Galería */
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.grid img {
+  width: 300px;
+  height: 300px; /* forzamos cuadrado */
+  object-fit: contain; /* mantiene proporción del tatuaje */
+  background: white;  /* relleno si es rectangular */
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #6a0dad;
+}/* Importar fuente estilo Minecraft (pixelada) desde Font Meme o similar */
 @import url('https://fonts.cdnfonts.com/css/minecraft'); /* Ejemplo, sustituir según fuente exacta */
 
 * {
