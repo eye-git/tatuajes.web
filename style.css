@@ -1,101 +1,211 @@
+/* RESET */
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
 
+/* FONDO GENERAL */
+
 body{
 background:#000;
-color:#8fae8f;
-font-family:monospace;
+color:#9fb39f;
+font-family:"Courier New", monospace;
+
 display:flex;
 justify-content:center;
-padding:40px;
+align-items:flex-start;
+
+padding:60px;
+min-height:100vh;
 }
 
-/* ventana principal */
+/* VENTANA PRINCIPAL */
 
 .window{
 width:900px;
-border:1px solid #2e3b2e;
-background:#050705;
+background:#040604;
+border:1px solid #2f3d2f;
+
+box-shadow:
+0 0 20px rgba(120,180,120,0.08),
+inset 0 0 40px rgba(120,180,120,0.03);
+
+position:relative;
 }
 
-/* barra superior tipo OS */
+/* EFECTO CRT / SCANLINES */
+
+.window::after{
+content:"";
+position:absolute;
+inset:0;
+pointer-events:none;
+
+background:
+repeating-linear-gradient(
+to bottom,
+rgba(255,255,255,0.02),
+rgba(255,255,255,0.02) 1px,
+transparent 1px,
+transparent 3px
+);
+}
+
+/* BARRA SUPERIOR */
 
 .topbar{
-height:28px;
-border-bottom:1px solid #2e3b2e;
+height:30px;
+border-bottom:1px solid #2f3d2f;
 display:flex;
 align-items:center;
-gap:6px;
-padding-left:10px;
+gap:8px;
+padding-left:12px;
+background:#070a07;
 }
 
+/* BOTONES */
+
 .dot{
-width:8px;
-height:8px;
-background:#8fae8f;
+width:9px;
+height:9px;
 border-radius:50%;
+background:#8aa88a;
 opacity:0.5;
 }
 
-/* titulo */
+/* TITULO */
 
 .title{
-padding:20px;
-border-bottom:1px solid #2e3b2e;
+padding:24px;
+border-bottom:1px solid #2f3d2f;
 }
 
 h1{
-font-size:28px;
-letter-spacing:6px;
+font-size:32px;
+letter-spacing:8px;
+color:#b6d1b6;
+
+text-shadow:
+0 0 6px rgba(120,200,120,0.25);
 }
 
 .title p{
 font-size:12px;
 opacity:0.6;
-margin-top:4px;
+margin-top:6px;
+letter-spacing:1px;
 }
 
-/* galeria */
+/* CONTENIDO */
 
 main{
-padding:20px;
+padding:24px;
 }
+
+/* GALERIA */
 
 .gallery{
+
 display:grid;
-grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
-gap:16px;
+
+grid-template-columns:
+repeat(auto-fill, minmax(160px,1fr));
+
+gap:18px;
+
 }
 
-/* marcos */
+/* MARCOS */
 
 .frame{
+
 aspect-ratio:1/1;
-border:1px solid #2e3b2e;
-background:#020402;
+
+border:1px solid #2f3d2f;
+
+background:#020302;
 
 display:flex;
 align-items:center;
 justify-content:center;
 
-padding:10px;
-transition:0.2s;
+padding:12px;
+
+position:relative;
+
+transition:
+border 0.2s,
+box-shadow 0.2s;
+
 }
 
-/* efecto hover */
+/* EFECTO INTERNO GRID */
+
+.frame::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+rgba(100,140,100,0.05) 1px,
+transparent 1px
+),
+
+linear-gradient(
+90deg,
+rgba(100,140,100,0.05) 1px,
+transparent 1px
+);
+
+background-size:20px 20px;
+
+pointer-events:none;
+
+}
+
+/* HOVER */
 
 .frame:hover{
-border-color:#8fae8f;
+
+border-color:#9fb39f;
+
+box-shadow:
+0 0 10px rgba(150,200,150,0.15);
+
 }
 
-/* imagen */
+/* IMAGEN */
 
 .frame img{
+
 max-width:100%;
 max-height:100%;
+
 object-fit:contain;
-filter:grayscale(100%);
+
+filter:
+grayscale(100%)
+contrast(110%)
+brightness(90%);
+
+transition:0.2s;
+
+}
+
+/* HOVER IMAGEN */
+
+.frame:hover img{
+
+filter:
+grayscale(20%)
+contrast(120%)
+brightness(100%);
+
 }
