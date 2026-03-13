@@ -1,149 +1,39 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
-background:#e6e6e6;
-font-family: monospace;
-overflow-x:hidden;
+background:#c0c0c0;
+font-family:Verdana, sans-serif;
 }
 
-/* TITULO */
+/* ventana retro */
 
-.title{
-position:fixed;
-top:-20px;
-right:-20px;
-font-size:140px;
-color:black;
+.window{
+width:700px;
+margin:60px auto;
+border:2px solid black;
+background:white;
+}
+
+/* barra superior */
+
+.titlebar{
+background:#000080;
+color:white;
+padding:6px;
 font-weight:bold;
 }
 
-/* GALERIA */
+/* galeria */
 
 .gallery{
-width:900px;
-margin:120px auto;
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:40px;
+gap:20px;
+padding:20px;
 }
-
-/* IMAGENES */
 
 .gallery img{
 width:100%;
 aspect-ratio:1/1;
-
 object-fit:contain;
 background:white;
-
-border:6px solid black;
-}* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: white;
-  color: black;
-  font-family: 'Courier New', Courier, monospace; /* fuente estilo código */
-}
-
-header {
-  width: 100%;
-  height: auto;
-  position: relative;
-}
-
-header h1 {
-  font-family: 'Courier New', Courier, monospace; /* fuente estilo código */
-  font-size: 6em; /* título grande */
-  color: black;
-  text-transform: lowercase;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/* Galería */
-main {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 40px 20px;
-}
-
-.grid img {
-  width: 300px;
-  height: 300px; /* forzamos cuadrado */
-  object-fit: contain; /* mantiene proporción del tatuaje */
-  background: white;  /* relleno si es rectangular */
-  border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  cursor: pointer;
-}
-
-.grid img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #6a0dad;
-}/* Importar fuente estilo Minecraft (pixelada) desde Font Meme o similar */
-@import url('https://fonts.cdnfonts.com/css/minecraft'); /* Ejemplo, sustituir según fuente exacta */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #0a0a0a;
-  color: #ddd;
-  font-family: Arial, sans-serif;
-}
-
-header {
-  width: 100%;
-  height: 150px;
-  position: relative;
-}
-
-header h1 {
-  font-family: 'Minecraft', sans-serif; /* Fuente pixel */
-  font-size: 4em;
-  color: white;
-  text-transform: lowercase;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-/* Galería */
-main {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 40px 20px;
-}
-
-.grid img {
-  width: 300px;
-  height: 300px; /* forzamos cuadrado */
-  object-fit: contain; /* mantiene proporción del tatuaje */
-  background: white;  /* relleno si es rectangular */
-  border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  cursor: pointer;
-}
-
-.grid img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #6a0dad;
+border:2px solid black;
 }
