@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>flabellum</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -11,18 +12,52 @@
 
 <div class="window">
 
-<header class="topbar">
-<span class="dot"></span>
-<span class="dot"></span>
-<span class="dot"></span>
-</header>
-
-<div class="title">
-<h1>flabellum</h1>
-<p>tattoo designs archive</p>
+<div class="topbar">
+<div class="dots">
+<span></span><span></span><span></span>
+</div>
+<div class="titlebar">flabellum archive</div>
 </div>
 
-<main>
+<div class="profile">
+
+<div class="preview">
+<img src="images/preview.png">
+</div>
+
+<div class="side">
+
+<div class="mini-grid">
+<img src="images/tattoo1.png">
+<img src="images/tattoo2.png">
+<img src="images/tattoo3.png">
+<img src="images/tattoo4.png">
+</div>
+
+<div class="info">
+
+<div class="panel">
+<h3>artist</h3>
+<p>tattoo design archive</p>
+<p>dark / horror / experimental</p>
+</div>
+
+<div class="panel">
+<h3>links</h3>
+<p>instagram</p>
+<p>booking</p>
+<p>contact</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="divider"></div>
+
+<h2 class="gallery-title">tattoo archive</h2>
 
 <div class="gallery">
 
@@ -35,9 +70,29 @@
 
 </div>
 
-</main>
-
 </div>
+
+<div class="lightbox" id="lightbox">
+<img id="lightbox-img">
+</div>
+
+<script>
+
+const lightbox = document.getElementById("lightbox")
+const lightboxImg = document.getElementById("lightbox-img")
+
+document.querySelectorAll(".frame img").forEach(img=>{
+img.addEventListener("click",()=>{
+lightbox.style.display="flex"
+lightboxImg.src=img.src
+})
+})
+
+lightbox.addEventListener("click",()=>{
+lightbox.style.display="none"
+})
+
+</script>
 
 </body>
 </html>
