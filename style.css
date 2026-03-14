@@ -13,17 +13,25 @@ overflow-x:hidden;
 
 }
 
-/* fondo gif */
+/* fondo gif verde */
 
 .background{
 
 position:fixed;
 inset:0;
 
-background:url("images/background.gif");
+background:
+linear-gradient(rgba(0,255,200,0.35),rgba(0,255,200,0.35)),
+url("images/background.gif");
 
 background-size:cover;
-opacity:.12;
+
+filter:
+grayscale(100%)
+contrast(140%)
+brightness(.7);
+
+opacity:.25;
 
 z-index:-1;
 
@@ -53,7 +61,7 @@ margin-bottom:30px;
 
 }
 
-/* main layout */
+/* layout */
 
 .main{
 
@@ -63,11 +71,13 @@ gap:40px;
 
 }
 
-/* profile */
+/* profile panel */
 
 .profile{
 
 border:1px solid #00ffff;
+background:rgba(0,30,30,0.45);
+
 padding:15px;
 
 }
@@ -75,7 +85,10 @@ padding:15px;
 .profile img{
 
 width:100%;
-filter:grayscale(100%) contrast(120%);
+
+filter:
+grayscale(100%)
+contrast(120%);
 
 margin-bottom:15px;
 
@@ -95,7 +108,16 @@ margin-bottom:10px;
 
 }
 
-/* tattoos */
+/* tattoos panel */
+
+.tattoos{
+
+border:1px solid #00ffff;
+background:rgba(0,30,30,0.45);
+
+padding:15px;
+
+}
 
 .tattoos h2{
 
@@ -103,6 +125,8 @@ font-size:14px;
 margin-bottom:15px;
 
 }
+
+/* gallery */
 
 .gallery{
 
@@ -121,9 +145,9 @@ object-fit:contain;
 
 border:1px solid #00ffff;
 
-background:black;
+background:rgba(0,20,20,.7);
 
-padding:10px;
+padding:12px;
 
 filter:grayscale(100%);
 
@@ -151,7 +175,7 @@ margin:40px 0;
 
 }
 
-/* pixel wall */
+/* gif wall */
 
 .pixelwall h2{
 
@@ -172,6 +196,31 @@ gap:10px;
 
 width:100%;
 border:1px solid #00ffff;
+
+}
+
+/* ascii */
+
+.ascii{
+
+border:1px solid #00ffff;
+background:rgba(0,30,30,0.45);
+
+padding:20px;
+
+margin-top:30px;
+
+}
+
+.ascii pre{
+
+color:#7fffd4;
+
+font-size:12px;
+
+line-height:14px;
+
+white-space:pre;
 
 }
 
