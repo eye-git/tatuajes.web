@@ -3,51 +3,60 @@
 
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>flabellum</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>flabellum archive</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="window">
+<div class="background"></div>
 
-<div class="topbar">
-<div class="dots">
-<span></span><span></span><span></span>
-</div>
-<div class="titlebar">flabellum archive</div>
-</div>
+<div class="container">
+
+<header class="header">
+FLABELLUM // TATTOO ARCHIVE
+</header>
+
+<div class="main">
 
 <div class="profile">
 
-<div class="preview">
-<img src="images/preview.png">
+<img src="images/me.jpg">
+
+<div class="bio">
+
+<h2>artist profile</h2>
+
+<p>
+tattoo apprentice<br>
+dark / horror / experimental
+</p>
+
+<p>
+based somewhere<br>
+open for designs
+</p>
+
+<p class="links">
+instagram<br>
+contact<br>
+booking
+</p>
+
 </div>
 
-<div class="side">
+</div>
 
-<div class="mini-grid">
+<div class="tattoos">
+
+<h2>tattoo archive</h2>
+
+<div class="gallery">
+
 <img src="images/tattoo1.png">
 <img src="images/tattoo2.png">
 <img src="images/tattoo3.png">
-<img src="images/tattoo4.png">
-</div>
-
-<div class="info">
-
-<div class="panel">
-<h3>artist</h3>
-<p>tattoo design archive</p>
-<p>dark / horror / experimental</p>
-</div>
-
-<div class="panel">
-<h3>links</h3>
-<p>instagram</p>
-<p>booking</p>
-<p>contact</p>
-</div>
 
 </div>
 
@@ -57,18 +66,19 @@
 
 <div class="divider"></div>
 
-<h2 class="gallery-title">tattoo archive</h2>
+<section class="pixelwall">
 
-<div class="gallery">
+<h2>visual archive</h2>
 
-<div class="frame"><img src="images/tattoo1.png"></div>
-<div class="frame"><img src="images/tattoo2.png"></div>
-<div class="frame"><img src="images/tattoo3.png"></div>
-<div class="frame"><img src="images/tattoo4.png"></div>
-<div class="frame"><img src="images/tattoo5.png"></div>
-<div class="frame"><img src="images/tattoo6.png"></div>
+<div class="gifwall">
+
+<img src="images/gif1.gif">
+<img src="images/gif2.gif">
+<img src="images/gif3.gif">
 
 </div>
+
+</section>
 
 </div>
 
@@ -81,7 +91,7 @@
 const lightbox = document.getElementById("lightbox")
 const lightboxImg = document.getElementById("lightbox-img")
 
-document.querySelectorAll(".frame img").forEach(img=>{
+document.querySelectorAll(".gallery img").forEach(img=>{
 img.addEventListener("click",()=>{
 lightbox.style.display="flex"
 lightboxImg.src=img.src
